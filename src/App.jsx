@@ -20,6 +20,10 @@ const router = createBrowserRouter([
         path: "/Chart",
         element: <ChartPage />,
       },
+            {
+        path: "/Chart",
+        element: <ChartPage />,
+      },
     ],
   },
 ]);
