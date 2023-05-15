@@ -1,0 +1,77 @@
+.LinkDiv {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    transition: 2s linear;
+    transition-delay: 0.9s;
+}
+
+.LinkDiv[data-alternate=true] {
+    flex-direction: row-reverse;
+}
+
+.LinkDiv img {
+    width: 120px;
+    margin: 0 50px 0 0;
+    cursor: pointer;
+}
+
+
+.LinkDiv div {
+    max-width: 500px;
+    height: 100%;
+    margin: auto 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    font-family: 'Lobster Two', cursive !important;
+    align-self: flex-start;
+    transition: 2s ease-in-out;
+    transition-delay: 0.9s;
+    margin-bottom: 10px;
+}
+
+h2::first-letter {
+    color: rgb(0 222 198);
+}
+
+p {
+    text-align: left;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    align-self: flex-end;
+    transition: 2s linear;
+}
+
+.LinkDiv[data-alternate=true] img {
+    margin: 0 0 0 50px;
+    transition-delay: 0.9s;
+}
+
+/* .LinkDiv[data-visible=true] img, */
+.LinkDiv[data-visible=true] div h2,
+.LinkDiv[data-visible=true] div p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 
+.LinkDiv[data-visible=false] img {
+    opacity: 0;
+    transform: translateX(-100px);
+} */
+
+.LinkDiv[data-visible=false] div h2 {
+    opacity: 0;
+    transform: translateY(-40px);
+}
+
+.LinkDiv[data-visible=false] div p {
+    opacity: 0;
+    transform: translateY(40px);
+}

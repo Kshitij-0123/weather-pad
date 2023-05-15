@@ -1,0 +1,7 @@
+.Details {
+    display: flex;
+    gap: 50px;
+    margin: 50px 0 0 0;
+    font-family: 'Alegreya Sans SC';
+    font-size: small;
+}

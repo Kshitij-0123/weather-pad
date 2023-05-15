@@ -1,0 +1,53 @@
+.form {
+    position: absolute;
+    z-index: 1;
+    margin: 50px 50px 0 0;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Mali', cursive;
+    overflow: hidden;
+    transition: 0.4s ease-in-out;
+}
+
+
+.form input {
+    all: unset;
+    padding: 10px 15px;
+    height: 0.5rem;
+    border-radius: 7px 0 0 7px;
+    background-color: rgba(240, 248, 255, 0.403);
+    text-align: left;
+    transition: 0.4s ease-in-out;
+}
+
+.form input:focus {
+    background-color: rgba(240, 248, 255, 0.6);
+}
+
+.form select {
+    color: aliceblue;
+    font-family: 'Mali', cursive;
+    font-weight: 900;
+    background-color: rgba(58, 58, 58, 0.3);
+    padding: 5px 15px;
+    /* border: 2px solid rgba(58, 58, 58, 0.3);*/
+    border: none;
+    height: 28px;
+    border-radius: 0 7px 7px 0;
+    transition: 0.4s ease-in-out;
+}
+
+.form select:focus {
+    background-color: rgba(58, 58, 58, 0.7);
+}
+
+.form select:focus-visible {
+    outline: none;
+}
+
+.form[data-visible=false] {
+    opacity: 0;
+}

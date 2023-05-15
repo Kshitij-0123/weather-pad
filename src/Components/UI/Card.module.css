@@ -1,0 +1,28 @@
+.Card {
+    width: 0;
+    height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(66, 66, 66, 0.452);
+    transition: all 0.5s ease-in-out;
+}
+
+.Card[data-visible=true] {
+    width: 12rem;
+    height: 12rem;
+    transition-delay: 0.4s;
+}
+
+.CardContent {
+    transition: 0.2s ease-out;
+}
+
+.Card[data-visible=true] .CardContent {
+    opacity: 1;
+    transition-delay: 0.8s;
+}
+
+.Card[data-visible=false] .CardContent {
+    opacity: 0;
+}

@@ -1,0 +1,56 @@
+.HomePageA {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* opacity: 0; */
+}
+
+.HomePageA.enterActive {
+    animation: enter 0.5s ease-in-out 0s 1 normal forwards;
+}
+
+.HomePageA.exitActive {
+    animation: enter 0.5s ease-in-out 0.4s 1 reverse forwards;
+}
+
+
+@keyframes enter {
+    0% {
+        opacity: 0;
+        height: 0;
+    }
+
+    100% {
+        opacity: 1;
+        height: 100%;
+    }
+}
+
+.HomePageB {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* opacity: 0; */
+}
+
+.HomePageB.enterActive {
+
+    animation: enter 0.5s ease-in-out 0.4s 1 normal forwards;
+}
+
+.HomePageB.exitActive {
+    animation: enter 0.5s ease-in-out 0s 1 reverse forwards;
+}
+
+
+@keyframes enter {
+    0% {
+        opacity: 0;
+        height: 0;
+    }
+
+    100% {
+        opacity: 1;
+        height: 100%;
+    }
+}
