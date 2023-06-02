@@ -6,6 +6,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-weight: 900;
 }
 
 .LogoNName {
@@ -25,4 +27,22 @@
 
 .NavBar h1 span {
     margin: 0 20px 0 0;
+}
+
+.navLink {
+    all: unset;
+    text-decoration: none;
+    background-color: transparent;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 10px 0 10px 0;
+    transition: 0.2s ease-in-out;
+}
+
+.navLink:hover {
+    background-color: rgb(176, 106, 0);
+}
+
+.active {
+    background-color: rgb(176, 106, 0);
 }

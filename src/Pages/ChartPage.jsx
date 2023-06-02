@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import LineChart from "../Components/Line Chart/LineChart";
+import { motion } from "framer-motion";
 
 const allDay = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
@@ -68,11 +69,16 @@ const ChartPage = () => {
     };
 
     fetchData();
-  }, [Coords]);
+  }, [Coords, Unit]);
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <LineChart data={Data} />
-    </div>
+    </motion.div>
   );
 };
 export default ChartPage;

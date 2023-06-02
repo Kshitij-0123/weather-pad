@@ -1,10 +1,10 @@
 import { Provider } from "react-redux";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ChartPage from "./Pages/ChartPage";
-
-// import HomePage from "./Pages/HomePage";
-import store from "./Store/index";
+import MapPage from "./Pages/MapPage";
 import HomePageB from "./Pages/HomePage";
+import AboutPage from "./Pages/AboutPage";
+import store from "./Store/index";
 import Root from "./Pages/_rootPage";
 
 const router = createBrowserRouter([
@@ -20,9 +20,13 @@ const router = createBrowserRouter([
         path: "/Chart",
         element: <ChartPage />,
       },
-            {
-        path: "/Chart",
-        element: <ChartPage />,
+      {
+        path: "/Map",
+        element: <MapPage />,
+      },
+      {
+        path: "/About",
+        element: <AboutPage />,
       },
     ],
   },

@@ -10,18 +10,17 @@ import Background from "../Components/Weather/WeatherComponents/Background";
 import { getWeather } from "../Store";
 import styles from "./RootPage.module.css";
 import NavBar from "../Components/NavBar/NavBar";
+import { AnimatePresence } from "framer-motion";
 
-export default function Root({ children }) {
+export default function Root() {
   const weatherType = useSelector(
-    (state) => state.weather.Details.Weather.Main,
+    (state) => state.weather.Details.Weather.Main
   );
-  console.log(children);
   const dispatch = useDispatch();
   const [weatherVisible, setWeatherVisible] = useState(true);
   useEffect(() => {
     dispatch(getWeather());
   }, [dispatch]);
-
   const visibilityChangeHandler = () => setWeatherVisible(!weatherVisible);
   return (
     <>
@@ -71,7 +70,9 @@ export default function Root({ children }) {
       >
         <div className={styles.HomePageB}>
           <NavBar />
-          <Outlet />
+          <AnimatePresence>
+            <Outlet />
+          </AnimatePresence>
         </div>
       </CSSTransition>
     </>
